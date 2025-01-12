@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 240);
+    background-attachment: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    margin-top: 0.5em;
+}
+
+#content {
+    width: 750px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0px 0px 6px 6px rgb(225, 225, 225);
+    border-radius: 4px;
+}
+
+.textklein {
+    font-size: 80%; 
+    color:rgb(150, 150, 150)
+}
+
+.radioModel, 
+.radioLila {
+    display: none;
+}
+
+.radioModelLabel, 
+.radioLilaLabel {
+    margin-left: 10px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: rgb(220, 220, 220);
+}
+
+.radioModelLabel {
+    display: block;
+}
+
+.radioLilaLabel {
+    display: inline-block;
+}
+
+.radioModelLabel:hover,
+.radioLilaLabel:hover {
+    background-color: rgb(200, 200, 200);
+    transition: background-color 0.2s linear;
+}
+
+.radioModel:checked + .radioModelLabel,
+.radioLila:checked + .radioLilaLabel {
+    background-color: rgb(134, 173, 137);
+    transition: background-color 0.2s linear;
+}
+
+.radioModel:checked ~ .radioModelLabel[id="radioModel2Label"],
+.radioModel:checked ~ .radioModelLabel[id="radioModel3Label"] {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.model2Collapsible,
+.model3Collapsible {
+    transition: max-height 400ms ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    margin-left: 10px;
+    border-left: 1px solid lightgray;
+    border-bottom: 0px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.model2Collapsible.expand,
+.model3Collapsible.expand {
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.model2Content,
+.model3Content {
+    margin: 10px;
+}
+
+.timeInput {
+    width: 3em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 13em 3em 8em;
+    gap: 10px;
+}
+
+.grid-item {
+    padding: 0px;
+}
+
+.mtop1 {
+    margin-top: 1em;
+}
+
+.mtop2 {
+    margin-top: 2em;
+}
+
+#endTimeContainer{
+    display: grid;
+    grid-template-columns: 7em 20em;
+    gap: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.endTimeOption {
+    margin-bottom: 10px;
+}
+
+/* SegeL-Uhr starten Button */
+#start {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(70, 130, 180); /* Auffällige Hintergrundfarbe */
+    color: white; /* Weißer Text */
+    font-size: 18px; /* Größere Schriftgröße */
+    font-weight: bold; /* Fettschrift */
+    cursor: pointer;
+    transition: background-color 0.2s linear, transform 0.2s linear;
+}
+
+#start:hover {
+    background-color: rgb(60, 120, 170); /* Dunklere Hintergrundfarbe beim Hover */
+}
+
+#start:active {
+    background-color: rgb(50, 110, 160); /* Noch dunklere Hintergrundfarbe beim Klicken */
+    transform: scale(0.98); /* Leichtes Verkleinern beim Klicken */
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="side_packages/jquery-3.6.0.min.js"></script>
+    <script src="side_packages/chart.js"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="img/x-icon" href="img/Thumbnail_xl_trans.png">
+    <title>SegeL Uhr</title>
+    </head>
+    <body>
+        <div id="content">
+            <h1>SegeL-Uhr Konfigurator</h1>
+
+            <div id="models">
+                <p>Wähle hier deine Einstellungen für die SegeL-Uhr:</p>
+
+                <div id="model1">
+                    <input type="radio" class="radioModel" name="model" id="radioModel1" value="1" checked>
+                    <label for="radioModel1" class="radioModelLabel">Standardmodell</label>
+                </div>
+
+                <div id="model2" class="mtop1">
+                    <input type="radio" class="radioModel" name="model" id="radioModel2" value="2">
+                    <label for="radioModel2" class="radioModelLabel" id="radioModel2Label">Standardmodell mit auf Enduhrzeit skalierten Phasen</label>
+                    
+                    <div class="model2Collapsible">
+                        <div class="model2Content">
+                            <div>
+                                Die Stunde ist schon angefangen, aber du möchtest trotzdem, dass die Schüler*innen zum Ende der Stunde alle SegeL-Phasen durchlaufen haben und hast keine Lust, die Zeiten der Phasen manuell festzulegen?<br>
+                                Dann wähle hier deine Enduhrzeit aus und die Einzel- und Partnerphase wird automatisch so angepasst, dass alle Phasen am Ende der Stunde beendet sind.
+                            </div>
+                            
+                            <div class="mtop1">
+                                <b>Enduhrzeit:</b>
+        
+                                <div id="endTimeContainer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="model3" class="mtop1">
+                    <input type="radio" class="radioModel" name="model" id="radioModel3" value="3">
+                    <label for="radioModel3" class="radioModelLabel" id="radioModel3Label">Länge der Phasen selbst festlegen</label>
+    
+                    <div class="model3Collapsible">
+                        <div class="model3Content">
+                            <div class="grid-container">
+                                <div class="grid-item">Dauer <span id="p1"></span>:</div>
+                                <div class="grid-item"><input type="number" class="timeInput" id="phase1" min="0" value="0" autocomplete="off"></div>
+                                <div class="grid-item">Minuten</div>
+                            
+                                <div class="grid-item">Dauer <span id="p2"></span>:</div>
+                                <div class="grid-item"><input type="number" class="timeInput" id="phase2" min="0" value="0" autocomplete="off"></div>
+                                <div class="grid-item">Minuten</div>
+                            
+                                <div class="grid-item">Dauer <span id="p3"></span>:</div>
+                                <div class="grid-item"><input type="number" class="timeInput" id="phase3" min="0" value="0" autocomplete="off"></div>
+                                <div class="grid-item">Minuten</div>
+                            
+                                <div class="grid-item">Dauer <span id="p4"></span>:</div>
+                                <div class="grid-item"><input type="number" class="timeInput" id="phase4" min="0" value="0" autocomplete="off"></div>
+                                <div class="grid-item">Minuten</div>
+                            
+                                <div class="grid-item p5">Dauer <span id="p5"></span>:</div>
+                                <div class="grid-item p5"><input type="number" class="timeInput" id="phase5" min="0" value="0" autocomplete="off"></div>
+                                <div class="grid-item p5">Minuten</div>
+                            </div>
+
+                            <div id="inforestzeit" class="mtop1">
+                                Bis zum Ende der Stunde sind es noch <span id="restzeit"></span> Minuten. Nach Abzug der in der manuellen Auswahl vergebenen Zeit bleiben noch <span id="summeManuell"></span> Minuten übrig.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <div id="lilaphasen" class="mtop2">
+                <p>Dauer der Organisation und Dokumentation:<br><span class="textklein">(Auswahl ist irrelevant, wenn Phasenlänge manuell eingegeben wurde.)</span></p>
+                
+                <input type="radio" name="lila" class="radioLila" id="lila_normal" value="normal" checked>
+                <label for="lila_normal" class="radioLilaLabel">normal</label>
+            
+                <input type="radio" name="lila" class="radioLila" id="lila_kurz" value="kurz">
+                <label for="lila_kurz" class="radioLilaLabel">kurz</label>
+            
+                <input type="radio" name="lila" class="radioLila" id="lila_ohne" value="ohne">
+                <label for="lila_ohne" class="radioLilaLabel">ohne</label>
+            </div>
+
+            <div id="starteUhr" class="mtop2">
+                <button id="start">SegeL-Uhr starten</button>
+            </div>
+
+        </div>
+
+    </body>
+</html>

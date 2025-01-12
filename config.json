@@ -1,0 +1,21 @@
+{
+  "endTimes": {
+    "1": "08:40",
+    "2": "09:30",
+    "3": "10:20",
+    "4": "11:30",
+    "5": "12:20",
+    "6": "13:10",
+    "7": "14:00",
+    "8": "14:45",
+    "9": "15:35"
+  },
+  "anzPhasen": 4,
+  "defaultModel": [10, 15, 5, 15, 15],
+  "shortPurpleModel": [5, 19, 2, 19, 15],
+  "noPurpleModel": [0, 22, 0, 22, 16],
+  "phasen": ["Organisation", "Stillephase", "Organisation", "Flüsterphase", "Ende der SegeL-Zeit"],
+  "chartColors": ["#8e44ad", "#f39c12", "#8e44ad", "#27ae60", "#ff000000"],
+  "chartBorderColor": ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ff000000"],
+  "documentBackgroundColor": ["#b19cd9", "#ffdaa3", "#b19cd9", "#a1d7c9", "#ffffff"]
+}
